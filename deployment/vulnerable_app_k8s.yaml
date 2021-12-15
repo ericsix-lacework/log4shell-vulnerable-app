@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: vulnerable-app
+  name: vuln-example
   namespace: lacework
   labels:
     app: vuln-example
@@ -14,12 +14,12 @@ spec:
       port: 8000
       targetPort: 50000
   selector:
-    app: vulnerable-app
+    app: vuln-example
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: vulnerable-app
+  name: vuln-example
   namespace: lacework
   labels:
     app: vuln-example
