@@ -1,5 +1,6 @@
 
-name: GitHub Actions Demo -  Log4J Vuln Container updates
+name: GitHub Actions Demo -  Log4J 
+
 on:
   push:
     branches: [ master ]
@@ -10,6 +11,7 @@ jobs:
     build:
         # ...
         runs-on: ubuntu-latest
+
         steps:
 
          - name: Check out the repo
