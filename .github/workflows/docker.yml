@@ -1,4 +1,3 @@
-```yml
 name: GitHub Actions Demo -  Log4J Vuln Container updates
 on:
   push:
