@@ -1,3 +1,4 @@
+##
 # Log4Shell sample vulnerable application (CVE-2021-44228)
 
 This repository contains a Spring Boot web application vulnerable to CVE-2021-44228, nicknamed [Log4Shell](https://www.lunasec.io/docs/blog/log4j-zero-day/).
