@@ -1,0 +1,10 @@
+There are two configs..
+
+	* pass_all_docker.yml  - Pass all, don't fail the build pipeline when vulns are discovered
+
+	* fail_crit_docker.yml - Fail on critical, kill the build pipeline.
+
+
+Copy these into .github/workflows/docker.yml and push the new build to your repo.
+
+

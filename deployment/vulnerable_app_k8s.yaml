@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: vuln-example
+  name: vulnerable-app
   namespace: lacework
   labels:
-    app: vuln-example
+    app: vulnerable-app
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
 spec:
@@ -14,24 +14,24 @@ spec:
       port: 8000
       targetPort: 50000
   selector:
-    app: vuln-example
+    app: vulnerable-app
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: vuln-example
+  name: vulnerable-app
   namespace: lacework
   labels:
-    app: vuln-example
+    app: vulnerable-app
 spec:
   selector:
     matchLabels:
-      app: vuln-example
+      app: vulnerable-app
   replicas: 1
   template:
     metadata:
       labels:
-        app: vuln-example
+        app: vulnerable-app
     spec:
       containers:
       - name: vulnerable-app
