@@ -1,3 +1,32 @@
+#############
+6@lacework.net
+
+2021/12/15 
+Log4j container with vulnerabilities built in. 
+-  Source forked from christophetd/log4shell-vulnerable-app 
+- Added github workflow actions to demonstrate lwscanner's build time scanning
+  * config for passing all vuln levels during build
+  * config for failing any criticals during build (see scan-config)
+
+This will build and scan a container image with log4j with the capabilities to stop/pass the build pipeline and deploy into an EKS cluster. 
+
+
+
+Requirements-
+Github build pipeline with variables as follows
+*AWS_ACCESS_KEY_ID
+*AWS_SECRET_ACCESS_KEY
+*DOCKERHUB_TOKEN
+*DOCKERHUB_USERNAME
+*KUBE_CONFIG_DATA
+*LW_ACCESS_TOKEN
+*LW_ACCOUNT_NAME
+
+
+MORE TO COME HERE... 
+
+
+
 ##
 # Log4Shell sample vulnerable application (CVE-2021-44228)
 
